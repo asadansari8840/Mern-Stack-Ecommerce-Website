@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const connectDatabase = require("./config/database");
 const cloudinary = require("cloudinary");
 const express = require("express");
+const path = require("path");
 //Handling uncaught exception 
 process.on("uncaughtException", (err) => {
     console.log(`Error: ${err.message}`);
