@@ -11,7 +11,16 @@ process.on("uncaughtException", (err) => {
 })
 
 //config 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config();
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      res.status(500).send(err);
+    }
+  );
+});
 //Connecting to database
 connectDatabase();
 
