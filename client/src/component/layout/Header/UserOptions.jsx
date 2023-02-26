@@ -9,7 +9,7 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import {useAlert} from "react-alert";
 import {logout} from "../../../actions/userAction";
 import {useDispatch,useSelector} from "react-redux";
-import Backdrop from "@material-ui/core/Backdrop";
+import {Backdrop} from "@material-ui/core";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 const UserOptions = ({ user }) => {
   const [open, setOpen] = useState(false);
