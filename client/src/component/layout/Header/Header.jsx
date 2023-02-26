@@ -2,7 +2,8 @@ import React from 'react';
 import "./Header.scss";
 import { Link } from 'react-router-dom';
 import {BsSearch} from "react-icons/bs";
-import {AiOutlineUser} from "react-icons/ai"
+import {AiOutlineUser} from "react-icons/ai",
+import {Backdrop} from "@material-ui/core";
 const Header = () =>{
   return (
         <nav style={{zIndex:"+10"}}>
