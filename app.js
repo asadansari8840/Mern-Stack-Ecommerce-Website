@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
+const path = require("path");
 // const path = require("path");
 //config
 // dotenv.config({ path: "./config/config.env" });
@@ -20,6 +21,13 @@ const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute");
 const payment = require("./routes/paymentRoute");
 
+//* Serve static assets in production, must be at this location of this file
+if (process.env.NODE_ENV === 'production') {
+    //*Set static folder
+    app.use(express.static('client/build'));
+    
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
+  }
 app.use("/api/v1", product);
 app.use("/api/v1", user);
 app.use("/api/v1", order);
