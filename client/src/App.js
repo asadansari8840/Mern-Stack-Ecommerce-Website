@@ -39,19 +39,19 @@ import About from "./component/About/About";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
-  const [stripeApiKey, setStripeApiKey] = useState("");
+  const [stripeApiKey, setStripeApiKey] = useState("Testing............");
 
-  async function getStripeApiKey() {
-    const { data } = await axios.get("/api/v1/stripeapikey");
-    setStripeApiKey(data.stripeApiKey);
+//   async function getStripeApiKey() {
+//     const { data } = await axios.get("/api/v1/stripeapikey");
+//     setStripeApiKey(data.stripeApiKey);
   }
  
   // window.addEventListener("contextmenu",(e)=> e.preventDefault());
 
-  useEffect(() => {
-    getStripeApiKey();
-    store.dispatch(loadUSer());
-  }, []);
+//   useEffect(() => {
+//     getStripeApiKey();
+//     store.dispatch(loadUSer());
+//   }, []);
 
   return (
     <>
