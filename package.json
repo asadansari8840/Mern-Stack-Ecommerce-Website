@@ -1,18 +1,4 @@
 {
-  "name": "ecommercemern",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
- "scripts": {
-    "start": "node server.js",
-    "server" : "nodemon server.js",
-    "client":"npm start --prefix client",
-    "clientinstall":"npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "render-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
@@ -28,5 +14,32 @@
     "nodemon": "^2.0.20",
     "stripe": "^11.6.0",
     "validator": "^13.7.0"
-  }
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "name": "contact-bank",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asadansari8840/Mern-Stack-Ecommerce-Website/"
+  },
+  "author": "Asad Ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asadansari8840/Mern-Stack-Ecommerce-Website/"
+  },
+  "homepage": "https://github.com/asadansari8840/Mern-Stack-Ecommerce-Website/",
+  "description": ""
 }
+
